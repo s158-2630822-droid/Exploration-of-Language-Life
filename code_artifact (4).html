@@ -1,0 +1,857 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>융합선택 [언어생활 탐구] 홍보 포스터</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts (Gowun Dodum & IBM Plex Sans KR) -->
+    <link href="https://fonts.googleapis.com/css2?family=Gowun+Dodum&family=IBM+Plex+Sans+KR:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'IBM Plex Sans KR', sans-serif;
+            background-color: #fefce8; /* 아주 밝은 노란빛 크림색 */
+            color: #1e293b; /* 가독성을 위한 슬레이트 차콜색 */
+            font-size: 1.02rem; /* 최적화된 본문 텍스트 크기 */
+            font-weight: 400; /* 장시간 읽어도 피로하지 않은 적절한 기본 두께 */
+            line-height: 1.6;
+        }
+        h1, h2, h3, h4, .font-round {
+            font-family: 'Gowun Dodum', sans-serif; /* 둥글고 단정하여 가독성이 매우 뛰어난 고운돋움 폰트 적용 */
+            font-weight: 600;
+        }
+        .chick-gradient-text {
+            background: linear-gradient(135deg, #ea580c 0%, #d97706 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .chick-bg-gradient {
+            background: linear-gradient(135deg, #fefce8 0%, #fef3c7 100%);
+        }
+        /* 아기자기한 동글이 애니메이션 */
+        .bounce-slow {
+            animation: bounce 3s infinite;
+        }
+        @keyframes bounce {
+            0%, 100% { transform: translateY(-3%); animation-timing-function: cubic-bezier(0.8,0,1,1); }
+            50% { transform: none; animation-timing-function: cubic-bezier(0,0,0.2,1); }
+        }
+    </style>
+</head>
+<body class="chick-bg-gradient min-h-screen selection:bg-yellow-300 selection:text-amber-950 overflow-x-hidden">
+
+    <!-- 상단 컨트롤 바 -->
+    <div class="bg-white/90 backdrop-blur-md border-b border-amber-200 sticky top-0 z-50 px-4 py-3 shadow-sm">
+        <div class="max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-4">
+            <div class="flex items-center gap-2">
+                <span class="flex h-3 w-3 relative">
+                    <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-yellow-400 opacity-75"></span>
+                    <span class="relative inline-flex rounded-full h-3 w-3 bg-yellow-500"></span>
+                </span>
+                <span class="text-lg font-bold text-amber-900 font-round">🐥 2026교육과정박람회 언어생활과 탐구</span>
+            </div>
+            
+            <div class="flex flex-wrap items-center gap-2">
+                <button onclick="switchMode('poster')" id="btn-poster" class="px-5 py-2 rounded-full text-sm font-bold transition-all bg-amber-500 text-white shadow-md shadow-amber-500/20 font-round">
+                    🖥️ 홍보 포스터
+                </button>
+                <button onclick="switchMode('leaflet')" id="btn-leaflet" class="px-5 py-2 rounded-full text-sm font-bold transition-all bg-white text-amber-800 border border-amber-200 hover:bg-amber-50 font-round">
+                    📖 3단 리플릿 보기
+                </button>
+                <button onclick="switchMode('quiz')" id="btn-quiz" class="px-5 py-2 rounded-full text-sm font-bold transition-all bg-white text-amber-800 border border-amber-200 hover:bg-amber-50 font-round">
+                    🎮 황금밸런스 퀴즈 챌린지
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- [1] 포스터 모드 화면 -->
+    <main id="mode-poster" class="max-w-6xl mx-auto px-4 py-10 transition-all duration-300">
+        
+        <div class="bg-white/40 p-6 md:p-8 rounded-3xl border border-amber-200/60 relative mb-12">
+            <div class="text-center md:text-left">
+                <div class="inline-block bg-amber-100 border border-amber-300 rounded-full px-6 py-1.5 mb-4 text-sm font-bold tracking-wider text-amber-800 uppercase font-round">
+                    🐥 3학년 국어 선택의 핵심 전략 과목 등장!
+                </div>
+                <h1 class="text-3xl md:text-5xl font-bold tracking-tight mb-4 leading-tight text-amber-950 font-round">
+                    문과에겐 <span class="chick-gradient-text">최고의 전공 세특</span>,<br class="hidden md:inline"> 이과에겐 <span class="text-orange-600">안전한 1학기 등급 찬스</span>!
+                </h1>
+                <h2 class="text-xl md:text-2xl font-bold text-amber-800 mb-4 font-round">
+                    융합선택 [언어생활 탐구]
+                </h2>
+                <p class="text-base md:text-lg text-slate-700 max-w-5xl font-light leading-relaxed">
+                    <strong>3학년 국어 선택 과목 중 유일하게 등급 성적이 산출</strong>되는 과목이자, <strong>1학기 집중 구성</strong>으로 수능 실전 대비와 학생부 마무리에 최고의 효율을 보여줍니다. 2015 개정 '언어와 매체' 문법 체계를 고스란히 연계해 수능 문법 정복까지 탄탄하게 책임집니다!
+                </p>
+            </div>
+            
+            <div class="absolute -top-12 -left-12 w-48 h-48 bg-yellow-300/20 rounded-full blur-3xl -z-10"></div>
+            <div class="absolute -bottom-12 -right-12 w-48 h-48 bg-orange-300/20 rounded-full blur-3xl -z-10"></div>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+            
+            <!-- 왼쪽 컬럼: 과목 소개 및 학업적 연계 -->
+            <div class="bg-white/80 backdrop-blur border border-amber-200 rounded-3xl p-6 shadow-md hover:shadow-lg transition-all flex flex-col justify-between">
+                <div>
+                    <div class="flex items-center gap-3 mb-6">
+                        <div class="p-2.5 bg-yellow-100 rounded-2xl text-amber-700">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path></svg>
+                        </div>
+                        <h2 class="text-2xl font-bold text-amber-950 font-round">왜 최고의 선택인가요?</h2>
+                    </div>
+                    <p class="text-slate-700 leading-relaxed mb-4 text-[1rem]">
+                        지루한 규정 암기에서 벗어나 유튜브 숏폼, 드라마, 카톡 등 일상 속 실제 언어를 데이터로 분석하고 비판적으로 탐구하는 실천 지향형 국어 융합 과목입니다.
+                    </p>
+                    <ul class="space-y-3 mt-4">
+                        <li class="flex items-start gap-2 text-slate-700 text-[1rem]">
+                            <span class="text-orange-500 font-bold text-lg">⏳</span> 
+                            <div>
+                                <strong class="text-slate-900">3학년 1학기 완료 ➡️ 2학기 수능 완전 집중!</strong>
+                                <p class="text-sm text-slate-500 mt-0.5">3학년 2학기 개설 과목과 다르게 1학기에 완전히 평가가 마감되므로, 2학기에는 온전히 수능 최종 파이널 공부를 할 수 있는 최고의 여건을 제공합니다.</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start gap-2 text-slate-700 text-[1rem]">
+                            <span class="text-orange-500 font-bold text-lg">📊</span> 
+                            <div>
+                                <strong class="text-slate-900">성취도 A~E & 석차 5등급제 산출</strong>
+                                <p class="text-sm text-slate-500 mt-0.5">3학년 국어 선택과목 중 유일하게 석차등급이 산출되므로 9등급 과목에 비해 우수 내신을 확보하기가 훨씬 유리합니다.</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start gap-2 text-slate-700 text-[1rem]">
+                            <span class="text-orange-500 font-bold text-lg">✍️</span> 
+                            <div>
+                                <strong class="text-slate-900">15개정 '언어와 매체' 문법과 일맥상통!</strong>
+                                <p class="text-sm text-slate-500 mt-0.5">수능 국어에 나오는 단어 형성, 사동/피동문, 높임법, 문장 구조 같은 정통 문법 파트와 가장 유사하게 진행되므로 수능에 직접적인 도움이 됩니다.</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="mt-8 pt-6 border-t border-amber-100">
+                    <div class="bg-amber-50 p-4 rounded-2xl border border-amber-100">
+                        <span class="text-sm uppercase font-bold tracking-wider text-orange-600 font-round block mb-1">💡 대입의 열쇠!</span>
+                        <p class="text-sm text-slate-700 leading-relaxed">
+                            <strong>서울대, 고려대, 충북대 등</strong> 주요 대학교 종합 전형에서 인문·사범·어문·소통·교육 계열 참고 교과로 지정되어, 1학기 내신과 세특의 완벽한 유종의 미를 보장합니다.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 가운데 컬럼: 대학 학과 연계 및 진로 맵 -->
+            <div class="bg-white/80 backdrop-blur border border-amber-200 rounded-3xl p-6 shadow-md hover:shadow-lg transition-all flex flex-col justify-between">
+                <div>
+                    <div class="flex items-center gap-3 mb-6">
+                        <div class="p-2.5 bg-yellow-100 rounded-2xl text-amber-700">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path></svg>
+                        </div>
+                        <h2 class="text-2xl font-bold text-amber-950 font-round">진로 및 학과 추천</h2>
+                    </div>
+                    <p class="text-slate-700 leading-relaxed mb-6 text-[1rem]">
+                        소통, 분석, 콘텐츠 설계, 기술 응용 등 어떤 전공이든 학생의 진로와 멋지게 융합됩니다.
+                    </p>
+
+                    <div class="space-y-4">
+                        <div class="p-3 bg-yellow-50/50 border border-amber-100 rounded-2xl hover:bg-yellow-100/30 transition-all">
+                            <div class="text-sm font-bold text-orange-700 font-round mb-1">📝 인문, 어문 & 사범계열 (문과 강추)</div>
+                            <p class="text-sm text-slate-600">국어교육, 초등교육, 영어교육, 국어국문학, 역사학, 철학, 문헌정보학 등</p>
+                        </div>
+                        <div class="p-3 bg-yellow-50/50 border border-amber-100 rounded-2xl hover:bg-yellow-100/30 transition-all">
+                            <div class="text-sm font-bold text-amber-700 font-round mb-1">🎬 미디어 & 사회과학계열 (소통 특화)</div>
+                            <p class="text-sm text-slate-600">미디어커뮤니케이션, 광고홍보, 신문방송, 심리학, 사회학, 행정학 등</p>
+                        </div>
+                        <div class="p-3 bg-yellow-50/50 border border-amber-100 rounded-2xl hover:bg-yellow-100/30 transition-all">
+                            <div class="text-sm font-bold text-amber-900 font-round mb-1">🔬 자연, IT공학 & 융합 (이과 강추)</div>
+                            <p class="text-sm text-slate-600">컴퓨터공학(자연어 처리 알고리즘), 데이터사이언스, 인공지능공학, 마케팅, 보건의료 소통 등</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="text-center text-sm text-slate-500 mt-6 italic">
+                    "문과 학생은 전공을 확실하게 매듭짓고, 이과 학생은 탄탄한 기술 융합 세특을 채워갑니다."
+                </div>
+            </div>
+
+            <!-- 오른쪽 컬럼: 인터랙티브 진로 맞춤 세특 설계기 -->
+            <div class="bg-gradient-to-br from-amber-100 via-white to-yellow-100 border border-amber-300 rounded-3xl p-6 shadow-md flex flex-col justify-between">
+                <div>
+                    <div class="flex items-center justify-between mb-4">
+                        <div class="flex items-center gap-2">
+                            <span class="px-2.5 py-0.5 bg-amber-500 text-white font-black text-xs rounded-full font-round">세특 설계기</span>
+                            <h2 class="text-lg font-bold text-amber-950 font-round">진로 연계 주제 피커</h2>
+                        </div>
+                    </div>
+                    <p class="text-sm text-slate-700 mb-4 leading-relaxed">
+                        아래 희망 전공 탭을 선택하고 <strong class="text-orange-600">◀ 이전 / 다음 ▶</strong> 버튼을 활용해 계열별로 풍성하게 준비된 4개의 명품 탐구 주제(총 16개)를 살펴보세요!
+                    </p>
+
+                    <!-- 계열 탭 -->
+                    <div class="grid grid-cols-2 gap-1.5 mb-4">
+                        <button onclick="selectMajor('media')" id="tab-media" class="px-2.5 py-1.5 rounded-full text-xs font-semibold bg-amber-500 text-white shadow-sm transition-all font-round">📺 미디어/광고</button>
+                        <button onclick="selectMajor('edu')" id="tab-edu" class="px-2.5 py-1.5 rounded-full text-xs font-semibold bg-white border border-amber-200 text-amber-800 transition-all hover:bg-amber-50 font-round">🏫 사범/인문</button>
+                        <button onclick="selectMajor('mkt')" id="tab-mkt" class="px-2.5 py-1.5 rounded-full text-xs font-semibold bg-white border border-amber-200 text-amber-800 transition-all hover:bg-amber-50 font-round">💼 경영/사회과학</button>
+                        <button onclick="selectMajor('tech')" id="tab-tech" class="px-2.5 py-1.5 rounded-full text-xs font-semibold bg-white border border-amber-200 text-amber-800 transition-all hover:bg-amber-50 font-round">💻 IT공학/이과</button>
+                    </div>
+
+                    <!-- 동적 콘텐츠 출력부 -->
+                    <div class="bg-white rounded-2xl p-4 border border-amber-200 min-h-[190px] flex flex-col justify-between shadow-inner relative">
+                        <div>
+                            <div class="flex justify-between items-center mb-1">
+                                <span id="major-badge" class="text-xs font-bold tracking-widest text-amber-600 font-round">MEDIA / ADVERTISING</span>
+                                <span id="major-index" class="text-[10px] text-amber-700 bg-amber-100 px-2 py-0.5 rounded-full font-bold">1 / 4</span>
+                            </div>
+                            <h3 id="major-title" class="text-base font-bold text-amber-950 mb-2 font-round">디지털 숏폼 미디어 언어 특성 연구</h3>
+                            <p id="major-desc" class="text-xs text-slate-600 leading-relaxed min-h-[60px]">
+                                인스타그램 릴스, 유튜브 쇼츠 등 숏폼 콘텐츠에 등장하는 줄임말 및 어그로성 텍스트의 자극성과 대중적 언어 수용 형태 분석
+                            </p>
+                        </div>
+                        
+                        <!-- 슬라이드 제어 및 부가 요소 -->
+                        <div class="flex justify-between items-center mt-3 pt-3 border-t border-amber-100">
+                            <div class="flex gap-2">
+                                <button onclick="prevTopic()" class="bg-amber-100 hover:bg-amber-200 text-amber-950 text-xs px-2.5 py-1 rounded-lg transition-all font-bold font-round">◀ 이전</button>
+                                <button onclick="nextTopic()" class="bg-amber-100 hover:bg-amber-200 text-amber-950 text-xs px-2.5 py-1 rounded-lg transition-all font-bold font-round">다음 ▶</button>
+                            </div>
+                            <span class="text-orange-600 font-semibold font-round text-xs">탐구 세특 추천 ★</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mt-4">
+                    <button onclick="copyIdea()" class="w-full bg-amber-50 hover:bg-amber-100 text-amber-900 py-2.5 rounded-full text-sm font-bold transition-all border border-amber-200 font-round">
+                        📋 현재 선택한 세특 주제 클립보드 복사
+                    </button>
+                    <p id="copy-toast" class="text-center text-sm text-orange-600 mt-1.5 opacity-0 transition-opacity font-round">성공적으로 복사되었습니다!</p>
+                </div>
+            </div>
+
+        </div>
+
+        <section class="bg-white/95 border-2 border-amber-200 rounded-3xl p-8 shadow-sm mb-12">
+            <h2 class="text-3xl text-amber-950 font-round mb-6 text-center flex items-center justify-center gap-2">
+                <span>🐥</span> 자주 묻는 질문
+            </h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 text-slate-800 text-sm md:text-base">
+                
+                <div class="bg-yellow-50/40 border border-amber-100 p-5 rounded-2xl">
+                    <h3 class="font-round text-lg text-amber-900 mb-2">Q1. 기존 교육과정의 ‘언어와 매체’와 무엇이 다른가요?</h3>
+                    <p class="leading-relaxed text-slate-700 text-sm">
+                        <strong class="text-orange-600">A1.</strong> 기존의 ‘언어와 매체’는 수능 선택 과목으로서 복잡한 문법 지식을 암기하고 시험을 치르는 성격이 강했습니다. 반면, 새 교육과정의 ‘언어생활 탐구’는 실제 일상에서 접하는 언어 자료(수필, 드라마, 광고, 뉴스 등)를 직접 수집하고 분석하는 ‘실천 및 탐구 중심’의 과목입니다. 지식 암기보다 활동과 탐구가 주를 이룹니다.
+                    </p>
+                </div>
+
+                <div class="bg-yellow-50/40 border border-amber-100 p-5 rounded-2xl">
+                    <h3 class="font-round text-lg text-amber-900 mb-2">Q2. 문법을 잘 못 하는데 수업을 따라가기 힘들까요?</h3>
+                    <p class="leading-relaxed text-slate-700 text-sm">
+                        <strong class="text-orange-600">A2.</strong> 고등학교 ‘공통국어’의 문법 지식을 바탕으로 시작하지만, 딱딱한 규칙을 외워 정답을 찾는 시험 위주가 아닙니다. 우리가 매일 쓰는 언어가 사회 속에서 어떻게 소통되고 관계를 만드는지 탐색하는 과목이므로, 주변 언어생활에 대한 호기심과 관찰력이 있다면 누구나 재미있게 참여할 수 있습니다.
+                    </p>
+                </div>
+
+                <div class="bg-yellow-50/40 border border-amber-100 p-5 rounded-2xl">
+                    <h3 class="font-round text-lg text-amber-900 mb-2">Q3. 이 과목이 수능에도 출제되나요?</h3>
+                    <p class="leading-relaxed text-slate-700 text-sm">
+                        <strong class="text-orange-600">A3.</strong> ‘언어생활 탐구’는 융합 선택 과목으로, 2028학년도 개편 수능 국어 영역의 직접적인 출제 범위(화법과 언어, 독서와 작문, 문학)에는 포함되지 않습니다. 하지만 이 과목에서 기르는 비판적 읽기 안목과 담화 맥락 분석 능력은 수능 국어의 독서(비문학) 지문이나 화법 지문을 정확하고 빠르게 독해하는 데 엄청난 밑바탕이 되어 줍니다.
+                    </p>
+                </div>
+
+                <div class="bg-yellow-50/40 border border-amber-100 p-5 rounded-2xl">
+                    <h3 class="font-round text-lg text-amber-900 mb-2">Q4. 이공계나 경상계 지망생이 들어도 생기부에 도움이 될까요?</h3>
+                    <p class="leading-relaxed text-slate-700 text-sm">
+                        <strong class="text-orange-600">A4.</strong> 당연히 도움이 됩니다! 성취 기준을 보면 ‘다양한 분야 및 교과의 언어 자료’를 탐구할 수 있도록 열려 있습니다. 예를 들어 컴퓨터공학 지망생은 ‘자연어 처리 알고리즘과 담화 분석’, 경영학 지망생은 ‘소비자 트렌드와 광고 언어 분석’처럼 자신의 진로 분야와 언어를 융합한 심층 보고서를 작성할 수 있어, 오히려 남들과 차별화된 독창적인 생기부를 만들 수 있습니다.
+                    </p>
+                </div>
+
+            </div>
+        </section>
+
+        <section class="bg-orange-500 text-white rounded-3xl p-8 shadow-sm flex flex-col md:flex-row justify-between items-center gap-6 mb-12">
+            <div class="max-w-3xl">
+                <span class="text-xs font-bold uppercase tracking-wider bg-orange-700 px-3 py-1 rounded-full font-round">HAKPYEONG & CSAT CONNECTION</span>
+                <h3 class="text-2xl font-round mt-3 mb-2">📈 모의고사 및 수능</h3>
+                <p class="text-sm leading-relaxed text-orange-50 text-[1rem]">
+                    언어생활 탐구에서 학습하는 대인 언어 및 매체 분석 기법들은 실제 수능 국어 문항과 매우 직접적으로 연계됩니다. 피동사/피동문 등의 표현적 성격, 문장 성분의 철저한 분석 및 담화 맥락 파악 능력은 고2·고3 학평 국어 영역의 어법 및 매체 문해력 문항들을 보다 정확하고 빠르게 공략할 수 있는 탄탄한 지름길을 마련해 줍니다.
+                </p>
+            </div>
+            <div class="shrink-0">
+                <button onclick="switchMode('quiz')" class="bg-white text-orange-600 font-extrabold px-6 py-3 rounded-full hover:shadow-lg transition-all font-round text-sm">
+                    퀴즈 풀고 내 언어지능 진단하기 ⚡
+                </button>
+            </div>
+        </section>
+
+        <!-- 하단 장식 푸터 -->
+        <div class="text-center text-xs text-slate-400">
+            본 서비스는 고교학점제 선택과정 박람회 지원용 고해상도 웹 도구입니다.
+        </div>
+    </main>
+
+    <!-- [2] 3단 리플릿 뷰 화면 -->
+    <section id="mode-leaflet" class="hidden max-w-5xl mx-auto px-4 py-10 transition-all duration-300">
+        <div class="text-center mb-8">
+            <h2 class="text-3xl font-black text-amber-950 font-round">📖 언어생활 탐구 3단 리플릿 미리보기</h2>
+            <p class="text-xs text-slate-600 mt-2">이 화면을 가로 양식으로 출력하여 예쁜 가이드 리플릿이나 전시용 게시판 원고로 활용하세요.</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 text-slate-900 mb-12">
+            <!-- 1단 (앞표지 및 소개) -->
+            <div class="bg-white p-6 rounded-3xl border-2 border-amber-200 flex flex-col justify-between min-h-[520px] shadow-sm">
+                <div>
+                    <span class="text-[10px] font-bold text-amber-700 border border-amber-200 bg-amber-50 px-2.5 py-1 rounded-full uppercase font-round">Front Cover</span>
+                    <h1 class="text-2xl font-black mt-6 text-amber-950 leading-tight font-round">
+                        진짜 내 말과 글이<br>
+                        소중한 무기가 되는 시간
+                    </h1>
+                    <p class="text-xs text-slate-500 mt-2">2022 개정 융합선택 [언어생활 탐구]</p>
+                    
+                    <div class="mt-8 space-y-3 text-sm">
+                        <div class="flex items-center gap-2">
+                            <span class="text-orange-500 text-sm">✓</span>
+                            <span class="font-bold text-slate-700">3학년 유일의 내신 등급 산출과목</span>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <span class="text-orange-500 text-sm">✓</span>
+                            <span class="font-bold text-slate-700">3학년 1학기 집중 완성 로드맵</span>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <span class="text-orange-500 text-sm">✓</span>
+                            <span class="font-bold text-slate-700">수능 국어 언어/매체 문법 연동</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="border-t border-amber-100 pt-4 text-center">
+                    <span class="text-[10px] text-amber-600 font-bold font-round block">국어과 융합 선택 과목 가이드</span>
+                </div>
+            </div>
+
+            <!-- 2단 (무엇을 배우는가? & 평가) -->
+            <div class="bg-white p-6 rounded-3xl border-2 border-amber-200 flex flex-col justify-between min-h-[520px] shadow-sm">
+                <div>
+                    <span class="text-[10px] font-bold text-amber-700 border border-amber-200 bg-amber-50 px-2.5 py-1 rounded-full uppercase font-round">Curriculum</span>
+                    <h3 class="text-lg font-bold mt-4 text-amber-950 border-b pb-2 font-round">무엇을 배우고 평가하나요?</h3>
+                    
+                    <div class="space-y-4 mt-4 text-xs leading-relaxed font-semibold">
+                        <div>
+                            <h4 class="font-bold text-slate-800">1. 수능 문법 직결 연계</h4>
+                            <p class="text-slate-500 mt-1">2015 개정 교육과정 '언어와 매체'의 꽃인 문법 영역을 중심으로 피동사, 높임법, 문장 성분을 다루어 수능에 큰 보탬을 줍니다.</p>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-slate-800">2. 매체와 소통 탐구</h4>
+                            <p class="text-slate-500 mt-1">드라마 자막, 신조어 소통 양식, 공익광고 텍스트, 생성형 AI의 담론을 비교하고 비판적으로 검토합니다.</p>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-slate-800">3. 평가 시스템의 매력</h4>
+                            <p class="text-slate-550 mt-1"><strong>성취도 A~E 및 석차 5등급제 적용!</strong> 3학년 선택 과목 중 학업 성실도를 확실하게 대학에 어필할 수 있는 정성평가 1순위 과목입니다.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-amber-50/50 p-3 rounded-2xl text-center">
+                    <span class="text-[10px] text-amber-800 font-semibold font-round">"전략적 등급 취득과 유익한 프로젝트의 만남"</span>
+                </div>
+            </div>
+
+            <!-- 3단 (세특 예시 및 FAQ 요약) -->
+            <div class="bg-white p-6 rounded-3xl border-2 border-amber-200 flex flex-col justify-between min-h-[520px] shadow-sm">
+                <div>
+                    <span class="text-[10px] font-bold text-amber-700 border border-amber-200 bg-amber-50 px-2.5 py-1 rounded-full uppercase font-round">Student Record & FAQ</span>
+                    <h3 class="text-lg font-bold mt-4 text-amber-950 border-b pb-2 font-round">세특 가이드 & 주요 궁금증</h3>
+                    
+                    <div class="space-y-3 mt-4 text-xs">
+                        <div class="bg-yellow-50/60 p-2.5 rounded-2xl border border-amber-100 leading-relaxed font-semibold">
+                            <span class="font-bold text-amber-900 font-round block mb-0.5">💡 문/이과 맞춤 탐구 예시</span>
+                            <span class="text-slate-600 block">• 미디어/문과: 숏폼 유행어 트렌드 확산 메커니즘 관찰</span>
+                            <span class="text-slate-600 block">• 이과/IT공학: AI 자연어 이해 맥락과 인간 소통의 차이 대조</span>
+                        </div>
+                        
+                        <div class="mt-2 text-slate-850">
+                            <p class="font-bold">Q. 문법 지식이 엄청 까다로울까요?</p>
+                            <p class="text-slate-555 mt-0.5">A. 단순 어학 지식 암기 형태를 넘어, 카톡과 일상 등 실제 사용 텍스트를 분석하므로 누구나 쉽고 신나게 따라갈 수 있습니다.</p>
+                        </div>
+                        <div class="mt-2 text-slate-850">
+                            <p class="font-bold">Q. 등급이 정교하게 산출되나요?</p>
+                            <p class="text-slate-555 mt-0.5">A. 성취도와 함께 '5등급제 내신' 등급이 확실하게 산출되므로 종합형 학업 증명에 최고의 영향력을 발휘합니다.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="text-center">
+                    <span class="text-[10px] text-amber-600 font-bold font-round block">언어가 자라는 행복한 발견</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- 3단 인쇄 팸플릿 백면 Q&A 가이드 -->
+        <div class="bg-white border-2 border-amber-200 p-8 rounded-3xl shadow-sm text-slate-800">
+            <h3 class="text-2xl font-round text-amber-950 mb-6 border-b pb-2">📋 상세 박람회 Q&A 안내서</h3>
+            <div class="space-y-6 text-sm md:text-base leading-relaxed font-semibold">
+                <div>
+                    <h4 class="font-round text-lg text-amber-900 mb-1">Q1. 기존 교육과정의 ‘언어와 매체’와 무엇이 다른가요?</h4>
+                    <p class="text-slate-700 pl-4 font-medium">A1. 기존의 ‘언어와 매체’는 수능 선택 과목으로서 복잡한 문법 지식을 암기하고 시험을 치르는 성격이 강했습니다. 반면, 새 교육과정의 ‘언어생활 탐구’는 실제 일상에서 접하는 언어 자료(수필, 드라마, 광고, 뉴스 등)를 직접 수집하고 분석하는 ‘실천 및 탐구 중심’의 과목입니다. 지식 암기보다 활동과 탐구가 주를 이룹니다.</p>
+                </div>
+                <div>
+                    <h4 class="font-round text-lg text-amber-900 mb-1">Q2. 문법을 잘 못 하는데 수업을 따라가기 힘들까요?</h4>
+                    <p class="text-slate-700 pl-4 font-medium">A2. 고등학교 ‘공통국어’의 문법 지식을 바탕으로 시작하지만, 딱딱한 규칙을 외워 정답을 찾는 시험 위주가 아닙니다. 우리가 매일 쓰는 언어가 사회 속에서 어떻게 소통되고 관계를 만드는지 탐색하는 과목이므로, 주변 언어생활에 대한 호기심과 관찰력이 있다면 누구나 재미있게 참여할 수 있습니다.</p>
+                </div>
+                <div>
+                    <h4 class="font-round text-lg text-amber-900 mb-1">Q3. 이 과목이 수능에도 출제되나요?</h4>
+                    <p class="text-slate-700 pl-4 font-medium">A3. ‘언어생활 탐구’는 융합 선택 과목으로, 2028학년도 개편 수능 국어 영역의 직접적인 출제 범위(화법과 언어, 독서와 작문, 문학)에는 포함되지 않습니다. 하지만 이 과목에서 기르는 비판적 읽기 안목과 담화 맥락 분석 능력은 수능 국어의 독서(비문학) 지문이나 화법 지문을 정확하고 빠르게 독해하는 데 엄청난 밑바탕이 되어 줍니다.</p>
+                </div>
+                <div>
+                    <h4 class="font-round text-lg text-amber-900 mb-1">Q4. 이공계나 경상계 지망생이 들어도 생기부에 도움이 될까요?</h4>
+                    <p class="text-slate-700 pl-4 font-medium">A4. 당연히 도움이 됩니다! 성취 기준을 보면 ‘다양한 분야 및 교과의 언어 자료’를 탐구할 수 있도록 열려 있습니다. 예를 들어 컴퓨터공학 지망생은 ‘자연어 처리 알고리즘과 담화 분석’, 경영학 지망생은 ‘소비자 트렌드와 광고 언어 분석’처럼 자신의 진로 분야와 언어를 융합한 심층 보고서를 작성할 수 있어, 오히려 남들과 차별화된 독창적인 생기부를 만들 수 있습니다.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- [3] 5문항 황금밸런스 퀴즈 화면 -->
+    <section id="mode-quiz" class="hidden max-w-3xl mx-auto px-4 py-8 transition-all duration-300">
+        <div class="bg-white border-2 border-amber-300 rounded-3xl p-8 text-center shadow-lg relative overflow-hidden">
+            
+            <!-- 퀴즈 인트로 -->
+            <div id="quiz-intro">
+                <span class="text-xs font-bold text-orange-700 bg-amber-100 border border-amber-200 px-4 py-1.5 rounded-full uppercase tracking-wider font-round">Language Life Golden Balance Quiz</span>
+                <h2 class="text-3xl font-black mt-4 mb-2 text-amber-950 font-round">언어생활 탐구 황금밸런스 퀴즈!</h2>
+                <p class="text-lg text-slate-600 mb-6 font-semibold leading-relaxed">우리가 매일 마주하는 카톡 말투, AI 소통 격차, 심심한 사과 논란 등 일상 꿀잼 화제와 관련된 5문항에 흥미진진하게 참여해 보세요!</p>
+                <div class="bg-yellow-50/60 p-4 rounded-2xl border border-amber-200 text-sm text-amber-900 max-w-lg mx-auto mb-8 leading-relaxed font-round">
+                    🐥 <strong>부스 소통 이벤트 진행 중!</strong><br>
+                    부스에 놀러 온 모든 친구들에게 달달한 간식을 드려요! 편안하게 퀴즈를 즐겨보세요! 🍬
+                </div>
+                <button onclick="startQuiz()" class="bg-gradient-to-r from-orange-500 to-amber-500 text-white font-extrabold px-10 py-4 rounded-full text-base hover:shadow-lg transition-all transform hover:scale-105 font-round">
+                    퀴즈 챌린지 시작하기 ⚡
+                </button>
+            </div>
+
+            <div id="quiz-question-container" class="hidden text-left">
+                <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-2 mb-6">
+                    <div>
+                        <span id="quiz-progress" class="text-sm text-amber-800 font-bold tracking-wider uppercase font-round">QUESTION 1 / 5</span>
+                        <span id="quiz-category" class="text-xs text-orange-600 font-semibold block mt-0.5 font-round">[단원: 언어 공동체와 소통 격차]</span>
+                    </div>
+                    <div class="w-full sm:w-32 h-1.5 bg-slate-100 rounded-full relative overflow-hidden border border-amber-100">
+                        <span id="quiz-progress-bar" class="absolute top-0 left-0 h-full bg-amber-500 w-1/5 transition-all duration-300"></span>
+                    </div>
+                </div>
+                
+                <h3 id="quiz-question-title" class="text-lg md:text-xl font-bold mb-6 text-amber-950 leading-relaxed font-round">
+                    Q1. "아니, 왜 심심한데 사과를 해?!" 🍎
+                </h3>
+                
+                <div id="quiz-options" class="space-y-3">
+                    <!-- JS로 동적 생성 -->
+                </div>
+
+                <!-- 실시간 문제 피드백 영역 -->
+                <div id="quiz-feedback" class="hidden mt-6 p-4 rounded-2xl border transition-all">
+                    <div class="flex items-center gap-2 mb-2">
+                        <span id="feedback-icon" class="text-lg"></span>
+                        <span id="feedback-title" class="font-extrabold text-sm font-round"></span>
+                    </div>
+                    <p id="feedback-desc" class="text-sm text-slate-700 leading-relaxed"></p>
+                    <button onclick="nextQuestion()" class="mt-4 bg-amber-500 hover:bg-amber-600 text-white text-xs font-bold px-4 py-2 rounded-full transition-all font-round shadow-sm">
+                        다음 문제로 이동 ➡️
+                    </button>
+                </div>
+            </div>
+
+            <!-- 퀴즈 최종 결과 화면 -->
+            <div id="quiz-result" class="hidden">
+                <div class="w-20 h-20 mx-auto bg-amber-100 text-amber-600 rounded-full flex items-center justify-center mb-6 border border-amber-200">
+                    <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                </div>
+                <h3 class="text-2xl font-black mb-2 text-amber-950 font-round">체험 완료! 나의 언어 탐구 성향은?</h3>
+                <div class="text-3xl font-extrabold text-orange-600 mb-4 font-round" id="quiz-score-display">100점 / 100점</div>
+                <p id="result-status" class="text-amber-800 font-bold mb-3 font-round"></p>
+                <p id="result-text" class="text-sm text-slate-600 leading-relaxed max-w-lg mx-auto mb-8"></p>
+                
+                <div class="flex flex-wrap justify-center gap-3">
+                    <button onclick="resetQuiz()" class="bg-white text-amber-800 px-6 py-2.5 border border-amber-200 rounded-full text-sm font-bold hover:bg-amber-50 transition-all font-round">처음부터 다시 도전</button>
+                    <button onclick="switchMode('poster')" class="bg-gradient-to-r from-orange-500 to-amber-500 text-white font-extrabold px-6 py-2.5 rounded-full text-sm hover:shadow-lg transition-all font-round shadow-md">내 희망 세특 확인하기</button>
+                </div>
+            </div>
+
+            <!-- 디자인 데코 -->
+            <div class="absolute -top-12 -left-12 w-32 h-32 bg-yellow-200/20 rounded-full blur-2xl -z-10"></div>
+        </div>
+    </section>
+
+    <!-- 푸터 -->
+    <footer class="max-w-6xl mx-auto px-4 py-12 mt-12 border-t border-amber-200 text-center text-amber-800 text-xs leading-relaxed font-round">
+        <p class="mb-2">본 자료는 2022 개정 고등학교 교육과정 가이드라인 및 주요 대학 대입 입시 전형 계획을 바탕으로 제작되었습니다.</p>
+        <p>&copy; 교육과정 박람회 국어과 홍보부스. All rights reserved.</p>
+    </footer>
+
+    <!-- 인터랙티브 JS 스크립트 -->
+    <script>
+        const majorDatabase = {
+            media: [
+                {
+                    badge: 'MEDIA / ADVERTISING',
+                    title: '디지털 숏폼 미디어 언어 특성 연구',
+                    desc: '인스타그램 릴스, 유튜브 쇼츠 등 숏폼 콘텐츠에 등장하는 줄임말 및 자극적인 요약형 신조어 분석. 청중의 자극성 인지도 및 올바른 매체 언어문화 가이드 제안.'
+                },
+                {
+                    badge: 'MEDIA / COMMUNICATION',
+                    title: '공익광고 카피에 쓰인 수사적 표현과 대중 설득 전략',
+                    desc: '환경, 교통안전, 양성평등 관련 공익광고 카피의 문장 구조와 어휘 사용을 대조 분석하여, 대중의 태도 변화에 기여하는 효율적 담화 구성안 설계.'
+                },
+                {
+                    badge: 'MEDIA / ALGORITHM',
+                    title: '유튜브 뉴스 썸네일 자막의 감정 지수와 소통 윤리 고찰',
+                    desc: '정치·사회 기사 썸네일에 노출되는 감정 부추김 어휘의 사용 양상 실태 조사. 정보 전달 매체의 신뢰성과 시청자 자극 마케팅 간의 언어적 상관관계 탐구.'
+                },
+                {
+                    badge: 'MEDIA / LITERACY',
+                    title: '인터넷 가짜 뉴스의 어휘적 특징과 텍스트 식별 지침 제작',
+                    desc: '허위 왜곡 선동 정보를 유통하는 가짜 뉴스의 표제어 특징(과도한 수식어, 근거 없는 감정형 서술어 등)을 분류하고 대중 리터러시 강화 지침 설계.'
+                }
+            ],
+            edu: [
+                {
+                    badge: 'EDUCATION / LINGUISTICS',
+                    title: '문과 치트키: 세대별 일상 담화의 소통 방식 비교 분석',
+                    desc: '가정, 학업, 직장 등 서로 다른 집단 내에서 생성되는 세대별 유행어 및 표현 양상 연구. 세대 간 갈등을 조율하고 국어교육/사범 교육적 차원에서 활용할 수 있는 건강한 소통 멘토링 프로그램 기획.'
+                },
+                {
+                    badge: 'EDUCATION / POLICY',
+                    title: '청소년 집단 언어가 유대감과 타인 배제성에 미치는 명암 탐색',
+                    desc: '학교 및 학급 내 또래 은어의 사용이 구성원 간의 동질감을 강화하는 긍정적 측면과 집단 밖 타인을 외롭게 차단하는 사회언어학적 명암 탐색.'
+                },
+                {
+                    badge: 'EDUCATION / HUMANITIES',
+                    title: '사회적 배려를 담은 우리말 순화 양상 및 교내 적용 방안',
+                    desc: '일상에서 배타적으로 쓰이는 불합리한 용어(예: 유모차, 학부모 등)의 사용 양상을 진단하고 대안 단어(유아차, 보호자 등)의 교내 공식 문서 도입 제안.'
+                },
+                {
+                    badge: 'EDUCATION / MULTICULTURAL',
+                    title: '다문화 공동체를 배려한 학교 가정통신문 공공 소통 개선안',
+                    desc: '과도하게 한문이 섞이거나 번역이 어려운 고난도 가정통신문 행정 어휘를 모든 학부모와 이주 배경 주민이 이해하기 쉽게 쉬운 우리말 양식으로 개정.'
+                }
+            ],
+            mkt: [
+                {
+                    badge: 'BUSINESS / SOCIOLOGY',
+                    title: '브랜드 슬로건에 숨겨진 소비자 자극 심리 분석',
+                    desc: '성공한 패션, F&B, 테크 글로벌 브랜드들의 한영 혼용 슬로건과 팝업스토어 안내문 수집. 대중 심리를 자극하고 소속감을 이끌어내는 마케팅 어휘 배치 전략의 고찰.'
+                },
+                {
+                    badge: 'BUSINESS / PSYCHOLOGY',
+                    title: '소셜 미디어(SNS) 퍼스널 브랜딩 프로필 텍스트의 정체성 표현',
+                    desc: '개인 블로그, SNS 등에서 자신을 정의하고 브랜딩하기 위해 사용하는 자기소개 담화 텍스트의 어휘 특징과 타인과의 신뢰 구축 맥락 분석.'
+                },
+                {
+                    badge: 'BUSINESS / ONLINE',
+                    title: '온라인 커뮤니티 악성 댓글(혐오 표현)의 어휘 특징과 치유 담화',
+                    desc: '사이버 공간에 나타난 갈등 증폭 및 악의성 단어의 감정 표현 방식을 범주화하고, 소통 갈등을 평화적으로 조율할 수 있는 정서 소통 매뉴얼 수립.'
+                },
+                {
+                    badge: 'BUSINESS / SPEECH',
+                    title: '선거 연설문 및 지도자 담화 속 설득의 격률과 대중 수용성',
+                    desc: '리더십 있는 정치인들의 핵심 스피치 연설문 분석. 상대의 동조를 얻어내는 공손성과 신뢰감 기반 수사법, 말하기 규칙의 성공 요인 연구.'
+                }
+            ],
+            tech: [
+                {
+                    badge: 'IT / SCIENCE / MEDICINE',
+                    title: '이과 필수 융합: 챗GPT와 인간 대화의 담화 맥락 인지 모델 비교',
+                    desc: '초대형 생성형 인공지능(AI)의 문장 맥락 파악 알고리즘과 실제 인간의 고맥락 소통 구조의 차이점 비판적 분석. 컴공/IT 지망생들이 국어 교과를 통해 최첨단 테크놀로지 분석을 수행함으로써 독보적인 융합 학업 능력을 어필하는 세특 치트키.'
+                },
+                {
+                    badge: 'MEDICINE / HEALTHCARE',
+                    title: '메디컬 융합: 의사-환자 소통의 전문 의학 용어 이해 격차 연구',
+                    desc: '진료실 상황에서 쓰이는 어려운 한자어 및 전문 질환 영어 명이 환자의 신뢰와 무슨 관련이 있는지 분석. 환자 존중을 위한 의료 소통 가이드 제작.'
+                },
+                {
+                    badge: 'IT / CODE',
+                    title: '프로그래밍 코드 구조와 자연어(국어) 문법 체계의 연관성 분석',
+                    desc: '개발 언어(Python, Java 등)에서 쓰이는 논리 제어문 구문 규칙과 우리 국어가 지닌 어문 규칙(문장 성분 배치, 수식 구조 등) 간 구조적 유사성 고찰.'
+                },
+                {
+                    badge: 'IT / VOICE AI',
+                    title: '음성 비서 알고리즘의 구어 반언어(어조/표정) 인지 한계와 개선점',
+                    desc: '시리나 빅스비 등 AI 음성 인식기가 단순 자모음을 텍스트화할 때 놓치기 쉬운 인간 대화 고유의 어조 및 높낮이, 억양의 맥락 보완 아이디어 도출.'
+                }
+            ]
+        };
+
+        let currentActiveMajor = 'media';
+        let currentTopicIndex = 0;
+
+        // 진로 세특 탭 클릭 핸들러
+        function selectMajor(majorKey) {
+            currentActiveMajor = majorKey;
+            currentTopicIndex = 0; // 탭 변경 시 인덱스 초기화
+            updateTopicUI();
+        }
+
+        // 세특 다음 주제 보기
+        function nextTopic() {
+            const list = majorDatabase[currentActiveMajor];
+            currentTopicIndex = (currentTopicIndex + 1) % list.length;
+            updateTopicUI();
+        }
+
+        // 세특 이전 주제 보기
+        function prevTopic() {
+            const list = majorDatabase[currentActiveMajor];
+            currentTopicIndex = (currentTopicIndex - 1 + list.length) % list.length;
+            updateTopicUI();
+        }
+
+        // 세특 UI 화면 갱신
+        function updateTopicUI() {
+            const tabs = ['tab-media', 'tab-edu', 'tab-mkt', 'tab-tech'];
+            tabs.forEach(tab => {
+                document.getElementById(tab).className = 'px-2.5 py-1.5 rounded-full text-xs font-semibold bg-white border border-amber-200 text-amber-800 transition-all hover:bg-amber-50 font-round';
+            });
+
+            // 활성화 스타일링
+            document.getElementById('tab-' + currentActiveMajor).className = 'px-2.5 py-1.5 rounded-full text-xs font-semibold bg-amber-500 text-white shadow-sm transition-all font-round';
+
+            // 데이터 갱신
+            const currentList = majorDatabase[currentActiveMajor];
+            const data = currentList[currentTopicIndex];
+            
+            document.getElementById('major-badge').innerText = data.badge;
+            document.getElementById('major-title').innerText = data.title;
+            document.getElementById('major-desc').innerText = data.desc;
+            document.getElementById('major-index').innerText = `${currentTopicIndex + 1} / ${currentList.length}`;
+        }
+
+        // 모드 전환
+        function switchMode(mode) {
+            document.getElementById('mode-poster').classList.add('hidden');
+            document.getElementById('mode-leaflet').classList.add('hidden');
+            document.getElementById('mode-quiz').classList.add('hidden');
+
+            document.getElementById('btn-poster').className = 'px-4 py-1.5 rounded-full text-xs font-bold transition-all bg-white text-amber-800 border border-amber-200 hover:bg-amber-50 font-round';
+            document.getElementById('btn-leaflet').className = 'px-4 py-1.5 rounded-full text-xs font-bold transition-all bg-white text-amber-800 border border-amber-200 hover:bg-amber-50 font-round';
+            document.getElementById('btn-quiz').className = 'px-4 py-1.5 rounded-full text-xs font-bold transition-all bg-white text-amber-800 border border-amber-200 hover:bg-amber-50 font-round';
+
+            if (mode === 'poster') {
+                document.getElementById('mode-poster').classList.remove('hidden');
+                document.getElementById('btn-poster').className = 'px-4 py-1.5 rounded-full text-xs font-bold transition-all bg-amber-500 text-white shadow-md shadow-amber-500/20 font-round';
+            } else if (mode === 'leaflet') {
+                document.getElementById('mode-leaflet').classList.remove('hidden');
+                document.getElementById('btn-leaflet').className = 'px-4 py-1.5 rounded-full text-xs font-bold transition-all bg-amber-500 text-white shadow-md shadow-amber-500/20 font-round';
+            } else if (mode === 'quiz') {
+                document.getElementById('mode-quiz').classList.remove('hidden');
+                document.getElementById('btn-quiz').className = 'px-4 py-1.5 rounded-full text-xs font-bold transition-all bg-amber-500 text-white shadow-md shadow-amber-500/20 font-round';
+            }
+        }
+
+        // 아이디어 복사 기능
+        function copyIdea() {
+            const title = document.getElementById('major-title').innerText;
+            const desc = document.getElementById('major-desc').innerText;
+            const copyText = `[언어생활 탐구 추천 탐구 주제]\n- 주제명: ${title}\n- 탐구 내용: ${desc}`;
+
+            const tempInput = document.createElement('textarea');
+            tempInput.value = copyText;
+            document.body.appendChild(tempInput);
+            tempInput.select();
+            document.execCommand('copy');
+            document.body.removeChild(tempInput);
+
+            const toast = document.getElementById('copy-toast');
+            toast.style.opacity = '1';
+            setTimeout(() => {
+                toast.style.opacity = '0';
+            }, 1800);
+        }
+
+        // --- 황금 밸런스 퀴즈 데이터 세트 ---
+        const quizQuestions = [
+            {
+                category: "[단원: 언어 공동체와 소통 격차]",
+                question: "Q1. '아니, 왜 심심한데 사과를 해?!' 🍎\n최근 SNS에서 '심심(甚深)한 사과의 말씀을 드립니다'라는 공지글에 일부 유저들이 '지루해서 장난으로 하는 사과인가?'라고 오해하는 해프닝이 있었습니다. 이러한 어휘 격차를 수업에서 마주할 때 가장 유연하고 바람직한 성찰 방식은 무엇일까요?",
+                options: [
+                    "어려운 한자어를 모르는 청중의 한글 해독력 저하만을 꾸짖는다.",
+                    "어려운 공공 행정 문서에 등장하는 모든 전문 어휘를 사전 암기해 버린다.",
+                    "세대와 환경에 따른 단어 맥락 차이를 이해하고, 누구나 이해하기 쉬운 소통 대안(깊고 진중한 사과 등)을 찾아본다.",
+                    "한문이 섞인 모든 국어 형태를 전면 국회 입법으로 배척하도록 제안한다."
+                ],
+                correctIdx: 2,
+                feedback: {
+                    title: "딩동댕! 아주 지혜로운 접근입니다. 🐥",
+                    desc: "한자어 '심심(甚: 심할 심, Deep: 깊을 심)'은 마음의 정성이 깊다는 소중한 약속입니다. 이 과목에서는 단순한 주입을 넘어, 집단 간 어휘 격차를 조사하고 이를 좁혀나갈 대안을 창의적으로 제안하는 법을 배웁니다!"
+                }
+            },
+            {
+                category: "[단원: 매체 언어의 표현 전략]",
+                question: "Q2. 등골이 서늘해지는 단톡방 카톡 찾기 💬\n단짝 친구에게 급한 메시지를 전달한 상황입니다. 평소 분위기와 전반적인 맥락을 비판적으로 탐색할 때, 기분이 상했거나 정색 중임을 풍기는 답장은 무엇일까요?",
+                options: [
+                    "ㅋㅋㅋㅋㅋ 알았오!",
+                    "웅웅!! 대박이당",
+                    "응.",
+                    "ㅠㅠㅠㅠ 어쩔 수 없징!"
+                ],
+                correctIdx: 2,
+                feedback: {
+                    title: "정답입니다! 소름 돋는 온점(.)의 위력이군요. 🐥",
+                    desc: "문자 끝 온점이나 글자 하나에 담긴 감정을 짚는 것도 '반언어적·비언어적 매체 기법'의 일환입니다. 이 과목은 스마트폰과 인터넷상에서 일어나는 소통의 신비한 심리와 규칙들을 과학적이고 입체적으로 탐색합니다!"
+                }
+            },
+            {
+                category: "[단원: 담화 맥락과 공손성의 원리]",
+                question: "Q3. 조별 모둠 과제 분담의 기술 🤝\n조원 지우가 역할 분담 중인 상대방의 감정을 배려하여 '상대에게 가해지는 부담은 최소화하고, 배려는 최대화'하는 멘트를 구사 중입니다. 이 공손성의 언어 규칙은?",
+                options: [
+                    "요령의 격률 (상대방의 부담을 줄이기)",
+                    "겸양의 격률 (자신을 최대한 낮추어 칭찬 사양하기)",
+                    "동의의 격률 (서로 간의 차이점을 좁히기)",
+                    "찬혜의 격률 (상대방을 비방하지 않고 상찬하기)"
+                ],
+                correctIdx: 0,
+                feedback: {
+                    title: "훌륭한 상식 역량입니다! 정답! 🐥",
+                    desc: "배려하는 말투로 훌륭한 협력을 이끄는 '요령의 격률'은 수행 평가, 동아리뿐 아니라 훗날 대입 면접과 사회 생활에서 무기가 됩니다. 갈등을 조율하는 실전 화법을 연마하게 됩니다!"
+                }
+            },
+            {
+                category: "[단원: 평등과 소통의 언어문화]",
+                question: "Q4. 실생활 속 '불합리한 표현' 고쳐보기 🛠\n차별적 편견을 덜어내기 위해, 교과서에서 적극적으로 추진하는 올바른 평등 순화어의 짝꿍으로 적절하지 않은 것은 무엇일까요?",
+                options: [
+                    "유모차(乳母車) ➡️ 유아차(乳兒車) (양육 중심 주체를 '아기'로 이동)",
+                    "저출산(低出産) ➡️ 저출생(低出生) (여성에게 편중되던 수치 프레임을 태어나는 환경으로 확장)",
+                    "학부모(學父母) ➡️ 보호자 (다양한 대안 형태의 가족을 폭넓게 포용)",
+                    "외조부모(外祖父母) ➡️ 큰할아버지/큰할머니 (외가 차별 타파를 위한 순화어)"
+                ],
+                correctIdx: 3,
+                feedback: {
+                    title: "정답입니다! 꼼꼼함이 빛났네요. 🐥",
+                    desc: "외가와 친가를 구분하는 서열적인 느낌을 씻어내기 위한 이상적인 제안은 친외가의 지칭 구분 없이 단순히 '할아버지, 할머니'로 단일 호칭을 사용하는 것입니다. 이러한 주체적 우리말 순화 과정을 통해 우수한 사회적 품격 세특을 구축합니다."
+                }
+            },
+            {
+                category: "[단원: 매체 리터러시와 비판적 사고]",
+                question: "Q5. 챗GPT의 교묘한 구라(?) 가려내기 🤖\n인공지능이 그럴싸한 거짓말을 진짜 정보처럼 답해버리는 '할루시네이션(환각)'을 가려내어 참과 거짓을 성실히 교차 검증하는 미래 고등학생들의 핵심 역량은?",
+                options: [
+                    "AI가 출력한 내용을 단 1초 만에 그대로 드래그하여 복사하는 복제 기교",
+                    "정보의 소스를 철저하게 의심하고 타당성을 확보하는 '비판적 미디어 리터러시'",
+                    "모든 스마트 기술의 전원을 교실에서 엄격하게 규제해버리는 제도",
+                    "영어로 작성해 남들보다 3초 더 빠르게 번역기를 다루는 기능"
+                ],
+                correctIdx: 1,
+                feedback: {
+                    title: "정답입니다! 미래의 스마트 리더! 🐥",
+                    desc: "미래 학업의 핵심은 단순 복제가 아니라 가치 정보를 판별하는 안목입니다. [언어생활 탐구]는 융합적 리터러시를 다져 수능 국어 고득점을 위한 주체적 분석 체력을 확실히 완성합니다."
+                }
+            }
+        ];
+
+        let curQIdx = 0;
+        let finalScore = 0;
+        let selectedAns = null;
+
+        function startQuiz() {
+            document.getElementById('quiz-intro').classList.add('hidden');
+            document.getElementById('quiz-question-container').classList.remove('hidden');
+            curQIdx = 0;
+            finalScore = 0;
+            loadQuestion();
+        }
+
+        function loadQuestion() {
+            selectedAns = null;
+            document.getElementById('quiz-feedback').classList.add('hidden');
+            
+            const qData = quizQuestions[curQIdx];
+            
+            document.getElementById('quiz-progress').innerText = `QUESTION ${curQIdx + 1} / 5`;
+            document.getElementById('quiz-category').innerText = qData.category;
+            document.getElementById('quiz-progress-bar').style.width = `${((curQIdx + 1) / 5) * 100}%`;
+            document.getElementById('quiz-question-title').innerText = qData.question;
+            
+            const optionsDiv = document.getElementById('quiz-options');
+            optionsDiv.innerHTML = '';
+            
+            qData.options.forEach((opt, idx) => {
+                const btn = document.createElement('button');
+                btn.className = "w-full bg-amber-50/50 hover:bg-yellow-100 border border-amber-200 text-left p-4 rounded-2xl text-base font-semibold text-amber-950 transition-all focus:outline-none font-round";
+                btn.innerHTML = `<span class="text-orange-600 font-extrabold mr-2">${idx + 1}.</span> ${opt}`;
+                btn.onclick = () => selectAnswer(idx, btn);
+                optionsDiv.appendChild(btn);
+            });
+        }
+
+        function selectAnswer(idx, btnElement) {
+            if (selectedAns !== null) return; 
+            
+            selectedAns = idx;
+            const qData = quizQuestions[curQIdx];
+            const feedbackDiv = document.getElementById('quiz-feedback');
+            const iconSpan = document.getElementById('feedback-icon');
+            const titleSpan = document.getElementById('feedback-title');
+            const descP = document.getElementById('feedback-desc');
+            
+            const buttons = document.getElementById('quiz-options').getElementsByTagName('button');
+            for (let i = 0; i < buttons.length; i++) {
+                buttons[i].disabled = true;
+                if (i === qData.correctIdx) {
+                    buttons[i].className = "w-full bg-emerald-100 border-2 border-emerald-500 text-left p-4 rounded-2xl text-base font-semibold text-emerald-900 transition-all font-round";
+                } else if (i === idx) {
+                    buttons[i].className = "w-full bg-rose-100 border-2 border-rose-500 text-left p-4 rounded-2xl text-base font-semibold text-rose-900 transition-all font-round";
+                } else {
+                    buttons[i].className = "w-full bg-slate-50 border border-slate-200 text-left p-4 rounded-2xl text-base font-semibold text-slate-400 transition-all font-round";
+                }
+            }
+            
+            feedbackDiv.classList.remove('hidden');
+            if (idx === qData.correctIdx) {
+                finalScore += 20;
+                feedbackDiv.className = "mt-6 p-4 rounded-2xl border border-emerald-500/30 bg-emerald-50 transition-all";
+                iconSpan.innerText = "🎉";
+                titleSpan.innerText = qData.feedback.title;
+                titleSpan.className = "font-extrabold text-base text-emerald-700 font-round";
+            } else {
+                feedbackDiv.className = "mt-6 p-4 rounded-2xl border border-rose-500/30 bg-rose-50 transition-all";
+                iconSpan.innerText = "💡";
+                titleSpan.innerText = "아쉽습니다! 정답을 함께 확인해 볼까요?";
+                titleSpan.className = "font-extrabold text-base text-rose-700 font-round";
+            }
+            descP.innerText = qData.feedback.desc;
+        }
+
+        function nextQuestion() {
+            curQIdx++;
+            if (curQIdx < 5) {
+                loadQuestion();
+            } else {
+                showQuizResult();
+            }
+        }
+
+        function showQuizResult() {
+            document.getElementById('quiz-question-container').classList.add('hidden');
+            document.getElementById('quiz-result').classList.remove('hidden');
+            
+            document.getElementById('quiz-score-display').innerText = `${finalScore}점 / 100점`;
+            
+            const status = document.getElementById('result-status');
+            const resultText = document.getElementById('result-text');
+            
+            if (finalScore >= 100) {
+                status.innerText = "🏆 완벽한 국어 융합형 천재! (A++ 등급)";
+                status.className = "text-orange-600 font-extrabold text-xl font-round";
+                resultText.innerText = "단 하나의 오답도 허용하지 않고 100점을 달성했습니다! 모바일 소통, 매체 비판 역량이 이미 프로페셔널 수준입니다. 언어생활 탐구 수업에서 상위 성취도 A와 1등급 내신 획득이 보장된 인재입니다. 오늘 부스에 참여해 주셔서 진심으로 감사합니다!";
+            } else if (finalScore >= 60) {
+                status.innerText = "✨ 주도적 탐구형 인재! (A 등급 적합)";
+                status.className = "text-amber-800 font-extrabold text-xl font-round";
+                resultText.innerText = "매우 우수한 성적입니다! 일상과 매체에 호기심이 가득하며, 지루한 지식 암기식 국어보다 이렇게 주도적으로 분석하는 수업이 가장 잘 맞습니다. 이 과목에서 멋지게 고등급 석차를 챙겨가기 충분합니다. 참여해 주셔서 감사합니다!";
+            } else {
+                status.innerText = "🌱 숨겨진 전략적 성장형 도전자! (B 등급 적합)";
+                status.className = "text-amber-900 font-extrabold text-xl font-round";
+                resultText.innerText = "아직 탐구 활동이 낯설지라도 이 과목을 들으면 비약적인 리터러시 발전이 약속되어 있습니다. 수능 국어 비문학 실력 향상에도 크게 기여하며, 과목의 매력과 안전한 5등급제 성적 산출을 누릴 수 있는 아주 지혜로운 선택이 될 것입니다. 오늘 즐거운 시간 되셨기를 바랍니다!";
+            }
+        }
+
+        function resetQuiz() {
+            document.getElementById('quiz-result').classList.add('hidden');
+            document.getElementById('quiz-intro').classList.remove('hidden');
+        }
+
+        // 초기 세팅 로드
+        window.onload = function() {
+            updateTopicUI();
+        };
+    </script>
+</body>
+</html>
